@@ -9,7 +9,7 @@ export default function Campaigns() {
   const { data: campaigns, isLoading } = useQuery(
     'campaigns',
     () => campaignApi.getAll().then((res) => {
-      return res.data})
+      return res.data.reverse()})
   );
 
   return (
